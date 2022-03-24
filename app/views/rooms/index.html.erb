@@ -1,0 +1,10 @@
+<ul>
+  <% @rooms.each do |room| %>
+    <br>
+    <p>Room n° <%= room.id %></p>
+    <li>Price per night : <%= room.price_per_night %> €</li>
+    <li>Capacity: <%= room.capacity %> adults</li>
+    <%= link_to 'Read more about this room', room_path(room.id) %>
+    <br>
+  <% end %>
+</ul>
